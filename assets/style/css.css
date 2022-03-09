@@ -1,0 +1,103 @@
+/* geral */
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: #262626;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* logo */
+
+.logo-n{
+    height: 16vh;
+    width: 100%;
+    text-align: center;
+}
+
+.logo-n img{
+    height: 100%;
+}
+
+/* carousel */
+
+.carousel{
+    height: 250px;
+    width: 80%;
+    position: relative;
+}
+
+/* button's */
+
+.carousel .switchLeft, .carousel .switchRight{
+    color: white;
+    font-weight: bold;
+    height: 100%;
+    width: 35px;
+    line-height: 250px;
+    font-size: 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .5);
+    border-color: rgba(0, 0, 0, .1);
+    border-style: solid;
+    top: 0;
+    z-index: 3;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.carousel .switchLeft:hover, .carousel .switchRight:hover{
+    border-color: #da4040;
+    color: #da4040;
+}
+
+.carousel .switchLeft{
+    position: absolute;
+    left: -50px;
+}
+
+.carousel .switchRight{
+    position: absolute;
+    right: -50px;
+}
+
+/* div filme's */
+
+.carousel-b{
+    height: 250px;
+    width: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    text-align: center;
+    padding-bottom: 10px !important;
+    display: flex;
+    align-items: center;
+}
+
+/* img's filme's */
+
+.carousel-b img{
+    min-width: 147px;
+    max-width: 147px;
+    height: 200px;
+    background-size: cover;
+    margin: 5px 10px;
+    cursor: pointer;
+    transition: 0.5s ease;
+    z-index: 2;
+}
+
+.carousel-b img:hover{
+    transform: scale(1.2);
+    z-index: 5;
+}

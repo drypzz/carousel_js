@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+    <head>
+        <meta charset='UTF-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+        <title>Document</title>
+
+        <!-- css externo -->
+        <link rel='stylesheet' href='assets/style/css.css'>
+    </head>
+    <body>
+        <!-- logo -->
+        <div class='logo-n'>
+            <img src='assets/gfx/logo.png' alt=''>
+        </div>
+
+        <div class='carousel'>
+            <div id='filmes' class='carousel-b'>
+                <!-- filmes -->
+            </div>
+            
+            <!-- button left and right -->
+            <button class='switchLeft sliderButton' onclick='sliderScrollLeft()'><</button>
+            <button class='switchRight sliderButton' onclick='sliderScrollRight()'>></button>
+        </div>
+
+        <!-- js externo -->
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.0/axios.js'></script>
+
+        <!-- js externo -->
+        <script src='assets/javascript/carousel.js'></script>
+    </body>
+</html>
