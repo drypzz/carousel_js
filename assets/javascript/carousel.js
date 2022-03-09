@@ -5,9 +5,8 @@ const sliders = document.querySelector('.carousel-b');
 
 // Varialbes
 
-var scrollPerClick;
-var imagePadding = 20;
 var scrollAmount = 0;
+var scrollPerClick;
 
 
 // call
@@ -27,6 +26,8 @@ function sliderScrollLeft(){
     if(scrollAmount < 0){
         scrollAmount = 0
     }
+
+    console.log('-'+ scrollAmount);
 };
 
 function sliderScrollRight(){
@@ -37,6 +38,8 @@ function sliderScrollRight(){
             behavior: 'smooth'
         })
     }
+
+    console.log('+'+ scrollAmount);
 };
 
 
@@ -55,10 +58,12 @@ async function showMovieData(){
         sliders.insertAdjacentHTML(
             'beforeend',
             `
-            <img class='img-${index} slider-img' src='https://image.tmdb.org/t/p/w185/${cur.poster_path}' />
+            <img class='img-${index}' src='https://image.tmdb.org/t/p/w185/${cur.poster_path}' alt='${cur.title}' />
             `
         )
     })
 
     scrollPerClick = 400;
+
+    console.log(result);
 };
