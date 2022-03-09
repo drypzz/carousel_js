@@ -27,7 +27,7 @@ function sliderScrollLeft(){
     if(scrollAmount < 0){
         scrollAmount = 0
     }
-}
+};
 
 function sliderScrollRight(){
     if(scrollAmount <= sliders.scrollWidth - sliders.clientWidth){
@@ -37,7 +37,7 @@ function sliderScrollRight(){
             behavior: 'smooth'
         })
     }
-}
+};
 
 
 // function carousel
