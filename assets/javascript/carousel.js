@@ -1,12 +1,34 @@
-
 // Const
 
 const sliders = document.querySelector('.carousel-b');
 
-// Varialbes
 
-var scrollAmount = 0;
+// Variable's
+
+var year = '2022'; // ano atual
+
 var scrollPerClick;
+
+
+// Table's
+
+var tables = {
+    'geral':{
+        'scrollAmount': 0, // não mexer
+        'number': 6 // escolha de 1 a 6
+    },
+    'apis': {
+        'key': 'c7208c7bd5cb1f231e3f2b65995c56b0', // key
+
+        // api's links
+        1: '&sort_by=popularity.desc',
+        2: '&certification_country=US&certification=R&sort_by=vote_average.desc',
+        3: '&with_genres=18&primary_release_year='+ year,
+        4: '&with_genres=18&sort_by=vote_average.desc&vote_count.gte=10',
+        5: '&certification_country=US&certification.lte=G',
+        6: '&primary_release_year='+ year
+    }
+};
 
 
 // call
@@ -19,37 +41,38 @@ showMovieData();
 function sliderScrollLeft(){
     sliders.scrollTo({
         top: 0,
-        left: (scrollAmount -= scrollPerClick),
+        left: (tables['geral']['scrollAmount'] -= scrollPerClick),
         behavior: 'smooth'
     });
 
-    if(scrollAmount < 0){
-        scrollAmount = 0
+    if(tables['geral']['scrollAmount'] < 0){
+        tables['geral']['scrollAmount'] = 0
     }
 
-    console.log('-'+ scrollAmount);
+    console.log('-'+ tables['geral']['scrollAmount']);
 };
 
 function sliderScrollRight(){
-    if(scrollAmount <= sliders.scrollWidth - sliders.clientWidth){
+    if(tables['geral']['scrollAmount'] <= sliders.scrollWidth - sliders.clientWidth){
         sliders.scrollTo({
             top: 0,
-            left: (scrollAmount += scrollPerClick),
+            left: (tables['geral']['scrollAmount'] += scrollPerClick),
             behavior: 'smooth'
         })
     }
 
-    console.log('+'+ scrollAmount);
+    console.log('+'+ tables['geral']['scrollAmount']);
 };
 
 
 // function carousel
 
 async function showMovieData(){
-    const api_key = 'c7208c7bd5cb1f231e3f2b65995c56b0';
+    const api_key = tables['apis']['key'];
+    const api_url = tables['apis'][tables['geral']['number']];
 
     var result = await axios.get(
-        'https://api.themoviedb.org/3/discover/movie?api_key='+ api_key +'&sort_by=popularity.desc'
+        'https://api.themoviedb.org/3/discover/movie?api_key='+ api_key +''+ api_url
     );
 
     result = result.data.results
