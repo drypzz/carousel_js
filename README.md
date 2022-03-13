@@ -12,13 +12,13 @@
     <table>
         <tr>
             <td>
-                <img src="https://img.shields.io/badge/HTML-ffba0a?style=for-the-badge&logo=html5&logoColor=white" target="_blank" alt="html">
+                <img src="https://img.shields.io/badge/HTML5-ff7f36?style=for-the-badge&logo=html5&logoColor=fff" target="_blank" alt="html">
             </td>
             <td>
-                <img src="https://img.shields.io/badge/JS-6200ff?&style=for-the-badge&logo=javascript&logoColor=white" target="_blank" alt="js">
+                <img src="https://img.shields.io/badge/JavaScript-ffee00?&style=for-the-badge&logo=javascript&logoColor=black" target="_blank" alt="js">
             </td>
             <td>
-                <img src="https://img.shields.io/badge/CSS-206991?&style=for-the-badge&logo=css3&logoColor=white" target="_blank" alt="css">
+                <img src="https://img.shields.io/badge/CSS3-206991?&style=for-the-badge&logo=css3&logoColor=white" target="_blank" alt="css">
             </td>
         </tr>
     </table>
