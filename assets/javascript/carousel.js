@@ -15,7 +15,7 @@ var scrollPerClick;
 var tables = {
     'geral':{
         'scrollAmount': 0, // não mexer
-        'number': 6 // escolha de 1 a 6
+        'number': 1 // escolha de 1 a 6
     },
     'apis': {
         'key': 'c7208c7bd5cb1f231e3f2b65995c56b0', // key
